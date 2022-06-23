@@ -17,6 +17,6 @@ public class CategoryService {
 
     @Transactional(readOnly = true)
     public List<Category> findAll() {
-        return categoryRepository.findByIsActive(true);
+        return categoryRepository.findAllByIsActive(true);
     }
 }

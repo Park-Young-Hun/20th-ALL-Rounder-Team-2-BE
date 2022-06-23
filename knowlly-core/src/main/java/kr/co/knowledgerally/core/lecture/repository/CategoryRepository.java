@@ -13,5 +13,5 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
      * @param isActive 활성화 여부
      * @return 카테고리 Optional
      */
-    List<Category> findByIsActive(boolean isActive);
+    List<Category> findAllByIsActive(boolean isActive);
 }
