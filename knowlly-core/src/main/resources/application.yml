@@ -2,6 +2,10 @@ spring:
     profiles:
       active: default
 
+    datasource:
+      hikari:
+        maximum-pool-size: 8
+
   # JPA
     jpa:
       hibernate:
@@ -22,6 +26,8 @@ spring:
       # JWT
     jwt:
       secret: 12345678901234567890123456789012
+      access-token-valid-miliseconds: 86400000 # 24 시간
+      refresh-token-valid-miliseconds: 5184000000  # 2달
 
     mvc:
       pathmatch:
